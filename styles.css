@@ -1,0 +1,85 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+  }
+.team-section {
+    width: 1200px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+}
+
+.team-header {
+    padding: 10px 10px; /* Espaciado vertical */
+    position: relative; /* Añadir para posicionamiento relativo */
+    margin: 0;
+    flex: 0 0 20%; /* Ajusta el ancho del encabezado a 25% */
+    margin: 0; /* Elimina márgenes */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.team-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.subtitle {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.description {
+    color: #666;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+
+/* Estilo del carrusel (lado derecho) */
+.carousel {
+    flex: 2;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.team-member {
+    flex: 1;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.team-member h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: #888;
+    font-size: 14px;
+}

@@ -1,0 +1,88 @@
+/* contenedor carrusel */
+#carousel {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* contenido carrusel */
+#slide-container {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 15px;
+  color: #000;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Asegúrate de que cada slide tenga un ancho fijo */
+.slide {
+  margin: 0;
+  scroll-snap-align: center;
+  flex: 0 0 30%; /* Cada slide ocupa el 30% del contenedor para que quepan tres */
+  position: relative;
+  text-align: center;
+  min-width: calc((100% / 3) - 10px); /* Ajustar según el número de slides visibles */
+}
+
+/* contenedor botones */
+.slide-buttons {
+  top: 230px;
+  display: flex;
+  justify-content: center; /* Centra los botones si deseas */
+  align-items: center;
+  padding: 10px;
+  color: yellow;
+  position: absolute; /* Para posicionar los botones */
+  right: 0; /* Pegado al lado derecho del contenedor */
+  transform: translateY(-50%); /* Ajusta el centrado vertical */
+}
+
+/* contenedor indicadores */
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.slide-indicator {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px;
+  width: 50px;
+}
+
+.slide-indicator:after {
+  content: "";
+  border: 1px black solid;
+  height: 10px;
+  width: 50px;
+}
+
+.slide-indicator.active:after,
+.slide-indicator:hover:after {
+  background-color: #ccc;
+}
+
+/* flechas */
+.arrow {
+  background-color: yellow; /* Cambia el fondo del botón a amarillo */
+  color: black; /* Mantén el color del texto (o flecha) en negro */
+  border: none; /* Opcional: elimina el borde para un aspecto más limpio */
+  padding: 15px 20px; /* Ajusta el tamaño del botón */
+  font-size: 1.5rem; /* Tamaño de la flecha */
+  cursor: pointer;
+  margin: 0 5px; /* Espacio entre los botones */
+  position: relative;
+}
